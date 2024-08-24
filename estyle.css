@@ -1,0 +1,114 @@
+@keyframes shine {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+body::-webkit-scrollbar {
+    width: 0;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    width: 100vw;
+    padding: 1rem;
+    background: linear-gradient(#842e2e,#f2541f);
+    caret-color: transparent;
+}
+.conatiner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.area { 
+    width: 100%;
+    height: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+.row1 {
+    width: 100%;
+    padding: 0.2rem;
+    padding-left: 2rem;
+    text-align: left;
+    font-size: 2rem;
+    text-decoration: underline solid 0.3rem #fb062f;
+    border-radius: 30px;
+    box-shadow: 0 0 30px #fff;
+    background: transparent;
+    backdrop-filter: blur(10rem);
+    color: #fff;
+}
+.row2 {
+    width: 80%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    background: transparent;
+    backdrop-filter: blur(10rem);
+    box-shadow: 0 0 30px #fff;
+    border-radius: 30px;
+    padding: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.col {
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.col .card {
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    width: 20rem;
+    background: linear-gradient(135deg, #fff,#f0f6a1,#000);
+    background-size: 200%, 200%;
+    animation: shine 3s ease 1;
+}
+.col .card .rating{
+    opacity: 0.9;
+    font-size: 2rem;
+    top: 20px;
+    position: absolute;
+    background: linear-gradient(135deg, #fff,#f7f3f7,#000);
+    background-size: 200%, 200%;
+    padding: 0.8rem 2rem;
+    padding-left: 5rem;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    animation: shine 3s ease infinite;
+}
+.card img {
+    overflow: hidden;
+    padding: 1rem 0.5rem 0;
+    border-top-right-radius: 60px;
+}
+.card-body {
+    text-align: center;
+}
+.card-body h5 {
+    font-size: 3.5rem;
+}
+.card-body h3 {
+    font-size: 3rem;
+}
+.card-body a {
+    font-size: 1.5rem;
+}
+.card-body .cart {
+    border-radius: 50%;
+    margin-right: 2rem;
+}

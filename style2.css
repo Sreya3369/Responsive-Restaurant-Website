@@ -1,0 +1,134 @@
+body::-webkit-scrollbar {
+    width: 0;
+}
+@keyframes typ {
+    from {
+        width: 100%;
+        opacity: 1;
+    }
+    to {
+        width: 0;
+    }
+}
+@keyframes del {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes led {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(135deg, #345,#543);
+}
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+}
+.area {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #556;
+    padding: 0.3rem 2rem;
+    border-radius: 30px;
+}
+.navbar .logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: url("img/1.png.jpg");
+    background-size: cover;
+}
+.navbar .r-name h1{
+    transform: translateX(40px);
+    color: #fff;
+}
+.navbar .fun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-size: 1.3rem;
+}
+.navbar .fun button {
+    outline: 1px solid white;
+    border: none;
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    background: transparent;
+    backdrop-filter:  blur(10px);
+}
+.navbar .fun i {
+    border-radius: 50%;
+    background: white;
+    padding: 1rem;
+    margin-left: 1rem;
+} 
+.wallpaper {
+    width: 100%;
+    text-align: center;
+}
+.wallpaper img {
+    opacity: 0;
+    width: 100%;
+    height: 53rem;
+    background-size: cover;
+}
+.hide {
+    display: none;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.ani, .info {
+    opacity: 0;
+    position: absolute;
+    align-self: center;
+    color: white;
+    top: 9rem;
+    font-size: 10rem;
+    animation: del 6s ease-in-out 1;
+}
+.info {
+    text-align: center;
+    top: 25rem;
+    font-size: 1.7rem;
+    overflow: hidden;
+    border-right: 0.3rem;
+    letter-spacing: 0.2rem;
+    margin: 0 auto;
+    animation: typ 6s ease-in-out 1;
+}
+.llg {
+    animation: led 10s ease-in-out 1;
+}
